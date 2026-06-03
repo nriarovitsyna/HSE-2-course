@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  analysis:
+    build:
+      context: ./FileAnalysisService
+      dockerfile: Dockerfile
+    ports:
+      - "8081:80"
+    networks:
+      - antiplagiarism-net
+    environment:
+      - ASPNETCORE_URLS=http://0.0.0.0:80
+
+  storage:
+    build:
+      context: ./FileStorageService
+      dockerfile: Dockerfile
+    ports:
+      - "8082:8080"
+    networks:
+      - antiplagiarism-net
+    environment:
+      - ASPNETCORE_URLS=http://0.0.0.0:8080
+
+  gateway:
+    build:
+      context: ./ApiGateway
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    networks:
+      - antiplagiarism-net
+    environment:
+      - ASPNETCORE_URLS=http://0.0.0.0:80
+
+networks:
+  antiplagiarism-net:
+    driver: bridge

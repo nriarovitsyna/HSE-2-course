@@ -1,0 +1,68 @@
+{
+  "info": {
+    "name": "AntiPlagiarism System API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health Checks",
+      "item": [
+        {
+          "name": "API Gateway",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/health"
+          }
+        },
+        {
+          "name": "Storage Service",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8082/health"
+          }
+        },
+        {
+          "name": "Analysis Service",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8081/health"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Storage Service Endpoints",
+      "item": [
+        {
+          "name": "Submit Work",
+          "request": {
+            "method": "POST",
+            "url": "http://localhost:8080/storage/works",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"studentName\":\"Test Student\",\"assignment\":\"HW3\",\"content\":\"Original work content\"}"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Analysis Service Endpoints",
+      "item": [
+        {
+          "name": "Get Report",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/analysis/reports/b22da28f-9bdb-484f-9376-a46e790821e4"
+          }
+        }
+      ]
+    }
+  ]
+}
