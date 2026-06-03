@@ -1,0 +1,51 @@
+accounts:
+- id: 1
+  name: Основной счет
+  balance: 1500000
+- id: 2
+  name: Накопительный счет
+  balance: 150000
+categories:
+- id: 1
+  type: Income
+  name: Зарплата
+- id: 2
+  type: Income
+  name: Кэшбэк
+- id: 3
+  type: Income
+  name: Инвестиции
+- id: 4
+  type: Expense
+  name: Продукты
+- id: 5
+  type: Expense
+  name: Транспорт
+- id: 6
+  type: Expense
+  name: Развлечения
+- id: 7
+  type: Expense
+  name: ЖКХ
+operations:
+- id: 1
+  type: Income
+  bankAccountId: 1
+  amount: 75000
+  date: 2025-10-29T01:00:51.8418200+03:00
+  description: Зарплата за январь
+  categoryId: 1
+- id: 2
+  type: Expense
+  bankAccountId: 1
+  amount: 5000
+  date: 2025-11-03T01:00:51.8864480+03:00
+  description: Продукты в Пятерочке
+  categoryId: 4
+- id: 3
+  type: Expense
+  bankAccountId: 1
+  amount: 1500
+  date: 2025-11-05T01:00:51.8864570+03:00
+  description: Метро и такси
+  categoryId: 5

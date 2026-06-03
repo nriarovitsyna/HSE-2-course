@@ -1,0 +1,15 @@
+Type,Id,Name,Balance,OperationType,BankAccountId,Amount,Date,Description,CategoryId
+Account,1,Основной счет,117500,,,,
+Account,2,Накопительный сче
+т,150000,,,,
+Account,3,Кредитная карта,5000,,,,
+Category,1,Зарплата,Income,,,,
+Category,2,Кэшбэк,Income,,,,
+Category,3,Инвестиции,Income,,,,
+Category,4,Продукты,Expense,,,,
+Category,5,Транспорт,Expense,,,,
+Category,6,Развлечения,Expense,,,,
+Category,7,ЖКХ,Expense,,,,
+Operation,1,Зарплата за январь,Income,1,75000,2025-10-29,1
+Operation,2,Продукты в Пятерочке,Expense,1,5000,2025-11-03,4
+Operation,3,Метро и такси,Expense,1,1500,2025-11-05,5
